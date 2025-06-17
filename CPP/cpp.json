@@ -1,0 +1,126 @@
+{
+	// Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"scope": "javascript,typescript",
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+}
+{
+	"Solve Function Template": {
+		"prefix": "maddy",
+		"body": [
+			"#include <bits/stdc++.h>",
+			"using namespace std;",
+			"#define int long long",
+			"vector<int> unique(vector<int> v) {",
+			"\tsort(v.begin(), v.end());",
+			"\tauto it = unique(v.begin(), v.end());",
+			"\tv.erase(it, v.end());",
+			"return v;",
+			"}",
+			"#define coutyes cout<<\"YES\"<<endl",
+            "#define coutno cout<<\"NO\"<<endl",
+			"#define as(v) sort(v.begin(), v.end())",
+			"#define sum(v) accumulate(v.begin(), v.end(),0LL)",
+            "#define ds(v) sort(v.begin(), v.end(), greater<>())",
+			"#define all(x) (x).begin(), (x).end()",
+			"#define pb push_back",
+			"#define MIN(v) *min_element(all(v))",
+			"#define MAX(v) *max_element(all(v))",
+			"#define gcd(a,b) __gcd(a,b)",
+			"#define lcm(a,b) (a*(b/gcd(a,b)))",
+			"#define ceil(a, b) (a + b - 1) / b",
+			"string to_upper(string a) { for (int i=0;i<(int)a.size();++i) if (a[i]>='a' && a[i]<='z') a[i]-='a'-'A'; return a; }",
+			"string to_lower(string a) { for (int i=0;i<(int)a.size();++i) if (a[i]>='A' && a[i]<='Z') a[i]+='a'-'A'; return a; }",
+			"void solve() {",
+			"\t${1:// logic for each test case}",
+			"}",
+			"",
+			"int32_t main() {",
+			"\tios_base::sync_with_stdio(false);",
+			"\tcin.tie(NULL);",
+			"",
+			"\tint t;",
+			"\tcin >> t;",
+			"",
+			"\twhile (t--) {",
+			"\t\tsolve();",
+			"\t}",
+			"",
+			"\treturn 0;",
+			"}"
+		],
+		"description": "C++ template with solve function and test case loop"
+	}
+}
+{
+	"input vector": {
+		"prefix": "dim",
+		"body": [
+			"\tint n;",
+			"\tcin >> n;",
+			"\tvector<int> v(n);",
+			"\tfor(int i=0;i<n;i++){",
+			"\t\tcin>>v[i];",
+			"}"
+		],
+		"description": "C++ template with solve function and test case loop"
+	}
+}
+{
+	"Precomputing maximum": {
+		"prefix": "premax",
+		"body": [
+			"\tvector<int> premax(n);",
+			"\tint maxs = v[0];",
+			"\tpremax[0] = maxs;",
+			"\tfor (int i = 1; i < n; i++) {",
+			"\t\tmaxs = max(maxs, v[i]);",
+			"\t\tpremax[i] = maxs;",
+			"\t}",
+		],
+		"description": "C++ template with solve function, test case loop, and prefix sum & max calculation"
+	}
+}
+{
+	"Precomputing sum": {
+		"prefix": "presum",
+		"body": [
+			"\tvector<int> presum(n);",
+			"\tint sum = 0;",
+			"\tfor (int i = 0; i < n; i++) {",
+			"\t\tsum += v[i];",
+			"\t\tpresum[i] = sum;",
+			"\t}",
+		],
+		"description": "C++ template with solve function, test case loop, and prefix sum & max calculation"
+	}
+}
+    	{
+	"Binary Exponentiation": {
+		"prefix": "binexpo",
+		"body": [
+			"\tint pow(int a,int b){",
+			"\tint ans=1;",
+			"\t while(b){",
+			"\tif(1&b){",
+			"\tans=(ans*1LL*a)%MOD;",
+			"\t};",
+			"\treturn ans;",
+			"}",
+			"}"
+		],
+		"description": "C++ template with solve function and test case loop"
+	}
+}
