@@ -30,6 +30,7 @@
 			"\tv.erase(it, v.end());",
 			"return v;",
 			"}",
+			"\tint toint(char c){ return c-'0'; }",
 			"#define coutyes cout<<\"YES\"<<endl",
             "#define coutno cout<<\"NO\"<<endl",
 			"#define as(v) sort(v.begin(), v.end())",
