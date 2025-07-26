@@ -134,25 +134,26 @@
 		],
 		"description": "C++ template with solve function and test case loop"
 	}
+		
 }
-vector<int> sieve(int n) {
-    
-    // creation of boolean array
-    vector<bool> prime(n + 1, true);
-    for (int p = 2; p * p <= n; p++) {
-        if (prime[p] == true) {
-            
-            // marking as false
-            for (int i = p * p; i <= n; i += p)
-                prime[i] = false;
-        }
-    }
-    
-    vector<int> res;
-    for (int p = 2; p <= n; p++){
-        if (prime[p]){ 
-            res.push_back(p);
-        }
-    }
-    return res;
+
+
+{
+	"Precomputing Prime": {
+		"prefix": "prime",
+		"body": [
+			 "// Template :https://github.com/Failureguy94/Template-for-Competitive-Programming",
+			 "\tint n;",
+			"\tvector<bool> is_prime(n+1,true);",
+			"\tis_prime[0]=is_prime[1]=false;",
+			"\tfor (int i = 2; i <=n; i++) {",
+			"\t\tif(is_prime[i] && i*i<=n){",
+			"\t\tfor(int j=i*i;j<=n;j+=i){",
+			"\t\t\tis_prime[j]=false;",
+			"\t\t\t}",
+			"\t\t}",
+			"\t}",
+		],
+		"description": "C++ template to find the prime numbers using sieves upto n"
+	}
 }
